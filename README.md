@@ -36,10 +36,10 @@ A simple React application that fetches and displays random GIFs using the Giphy
    ```bash
    npm start
 
-##Folder Structure
+## Folder Structure
 
 ```plaintext
-.
+Random-GIF-Generator
 ├── public/
 ├── src/
 │   ├── components/
