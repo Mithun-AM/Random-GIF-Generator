@@ -7,6 +7,7 @@ const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;
 export default function Usegif(search){
     const [gif, setGif] = useState('');
     const [loading, setLoading] = useState(false);
+    const [limitReached, setLimitReached] = useState(false);
 
     async function fetchData(search) {
         setLoading(true);
@@ -15,7 +16,11 @@ export default function Usegif(search){
             const imageSrc = response.data.data.images.downsized_medium.url;
             setGif(imageSrc);
         } catch (error) {
-            console.error("Error fetching data:", error);
+            if (error.response && error.response.status === 429) {
+                setLimitReached(true);
+            } else {
+                console.error("Error fetching data:", error);
+            }
         }
         setLoading(false);
     }
@@ -24,5 +29,5 @@ export default function Usegif(search){
         fetchData(search);
     }, [search]);
 
-    return {gif,loading,fetchData}
+    return {gif,loading,limitReached,fetchData}
 }

@@ -3,7 +3,7 @@ import Spinner from "./Spinner";
 
 export default function Random() {
 
-    let { gif, loading, fetchData } = Usegif();
+    let { gif, loading, limitReached, fetchData } = Usegif();
 
     return (
         <div
@@ -14,11 +14,15 @@ export default function Random() {
             </h1>
 
             {
-                loading ? (<Spinner />) : (<img src={gif} alt="GIF" loading="lazy" className="w-3/4 h-[270px] rounded-lg" />)
+                loading ? <Spinner /> : limitReached ? (
+                    <p className="text-red-500 font-bold text-center p-4">Limit reached. Try again after 1 hour.</p>
+                ) : (
+                    <img src={gif} alt="GIF" loading="lazy" className="w-3/4 h-[270px] rounded-lg" />
+                )
             }
 
             <button
-                onClick={() => fetchData() }
+                onClick={() => fetchData()}
                 className="bg-white bg-opacity-50 w-2/3 font-semibold p-1 rounded-lg">
                 GENERATE
             </button>
