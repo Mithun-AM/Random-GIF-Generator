@@ -47,7 +47,7 @@ Random-GIF-Generator
 │   │   ├── Tag.jsx
 │   │   ├── Spinner.jsx
 │   ├── hooks/
-│   │   ├── useGif.js
+│   │   ├── Usegif.js
 │   ├── App.jsx
 │   ├── index.js
 │   ├── index.css
