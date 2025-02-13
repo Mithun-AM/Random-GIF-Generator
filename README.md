@@ -37,7 +37,7 @@ A simple React application that fetches and displays random GIFs using the Giphy
    npm start
 
 
-**Project Structure:**
+**Folder Structure:**
 - `random-gif-generator/`
   - `src/`
     - `components/`
