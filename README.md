@@ -37,19 +37,18 @@ A simple React application that fetches and displays random GIFs using the Giphy
    npm start
 
 
-Folder Structure
-
-random-gif-generator/
-│── src/
-│   ├── components/
-│   │   ├── Random.jsx
-│   │   ├── Tag.jsx
-│   │   ├── Spinner.jsx
-│   ├── hooks/
-│   │   ├── useGif.js
-│   ├── App.jsx
-│   ├── index.js
-│── public/
-│── .env
-│── package.json
-│── README.md
+**Project Structure:**
+- `random-gif-generator/`
+  - `src/`
+    - `components/`
+      - `Random.jsx`
+      - `Tag.jsx`
+      - `Spinner.jsx`
+    - `hooks/`
+      - `useGif.js`
+    - `App.jsx`
+    - `index.js`
+  - `public/`
+  - `.env`
+  - `package.json`
+  - `README.md`
