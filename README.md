@@ -2,6 +2,9 @@
 
 A simple React application that fetches and displays random GIFs using the Giphy API. Users can generate random GIFs or search for GIFs based on a specific tag.
 
+## Screenshot
+![Random GIF Generator](public/image.png)
+
 ## Features
 - Fetch a random GIF on page load
 - Generate a new random GIF on button click
@@ -38,21 +41,4 @@ A simple React application that fetches and displays random GIFs using the Giphy
 
 ## Folder Structure
 
-```plaintext
-Random-GIF-Generator
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── Random.jsx
-│   │   ├── Tag.jsx
-│   │   ├── Spinner.jsx
-│   ├── hooks/
-│   │   ├── Usegif.js
-│   ├── App.jsx
-│   ├── index.js
-│   ├── index.css
-├── .env
-├── .gitignore
-├── package.json
-├── README.md
 
